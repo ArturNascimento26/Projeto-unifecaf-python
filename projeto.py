@@ -34,6 +34,17 @@ def cadastrar_peca():
       for criterio in criterios:
           print(f" - {criterio}")
 
+
+def listar_pecas():
+    print("\nLista de peças aprovadas e reprovadas:")
+    for indice, peca in enumerate(pecas, start = 1):
+        status = "Aprovada" if peca ["aprovada"] else "Reprovada"
+        print(f" {indice}. id: {peca['id']} | {status} | Peso: {peca['peso']}g | Cor: {peca['cor']} | Comprimento: {peca['comprimento']}cm")
+        if not peca ["aprovada"]:
+            for criterio in peca["criterios"]:
+                print(f" - {criterio}")
+
+
 print("\nGestão de Peças, Qaulidade e Armazenamento")
 print("1. Cadastrar nova peça")
 print("2. Listar peças aprovadas/reprovadas")
