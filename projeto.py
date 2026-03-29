@@ -41,6 +41,18 @@ def listar_pecas(pecas):
                 print(f" - {motivo}")
 
 
+
+def remover_peca(pecas, caixa_atual):
+
+
+
+def listar_caixas(caixas, caixa_atual):
+
+
+
+def gerar_relatorio(pecas, caixas, caixa_atual):
+
+
 print("\nGestão de Peças, Qaulidade e Armazenamento")
 print("1. Cadastrar nova peça")
 print("2. Listar peças aprovadas/reprovadas")
