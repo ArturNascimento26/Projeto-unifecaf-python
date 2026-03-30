@@ -43,6 +43,16 @@ def listar_pecas(pecas):
 
 
 def remover_peca(pecas, caixa_atual):
+    listar_pecas(pecas)
+    indice = int(input("Digite o numero da peca que deseja remover: ")) - 1
+    if 0 <= indice < len(pecas):
+        peca = pecas[indice]
+        if peca in caixa_atual:
+            caixa_atual.remove(peca)
+        pecas.pop(indice)
+        print(f"Peca removida com sucesso.")
+    else:
+        print("Indice invalido.")
 
 
 
@@ -50,36 +60,43 @@ def listar_caixas(caixas, caixa_atual):
 
 
 
-def gerar_relatorio(pecas, caixas, caixa_atual):
+def gerar_relatorio(pecas, caixas, caixa_atual)
 
 
-print("\nGestão de Peças, Qaulidade e Armazenamento")
-print("1. Cadastrar nova peça")
-print("2. Listar peças aprovadas/reprovadas")
-print("3. Remover peça cadastrada")
-print("4. Listar caixas fechadas")
-print("5. Gerar relatório final")
-print("6. Sair")
 
-opcao = input("Digite a opção desejada: ")
 
-if opcao == "1":
-        cadastrar_peca(pecas, caixas, caixa_atual)
+pecas = []
+caixas = []
+caixa_atual = []
 
-elif opcao == "2":
-        listar_pecas(pecas)
+while True:
+    print("\nGestão de Peças, Qaulidade e Armazenamento")
+    print("1. Cadastrar nova peça")
+    print("2. Listar peças aprovadas/reprovadas")
+    print("3. Remover peça cadastrada")
+    print("4. Listar caixas fechadas")
+    print("5. Gerar relatório final")
+    print("6. Sair")
 
-elif opcao == "3":
-        remover_peca(pecas, caixa_atual)
+    opcao = input("Digite a opção desejada: ")
 
-elif opcao == "4":
-        listar_caixas(caixas, caixa_atual)
+    if opcao == "1":
+            cadastrar_peca(pecas, caixas, caixa_atual)
 
-elif opcao == "5":
-        gerar_relatorio(pecas, caixas, caixa_atual)
+    elif opcao == "2":
+            listar_pecas(pecas)
 
-elif opcao == "6":
-    break
+    elif opcao == "3":
+            remover_peca(pecas, caixa_atual)
+
+    elif opcao == "4":
+            listar_caixas(caixas, caixa_atual)
+
+    elif opcao == "5":
+            gerar_relatorio(pecas, caixas, caixa_atual)
+
+    elif opcao == "6":
+        break
 
 
 
