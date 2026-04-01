@@ -210,9 +210,6 @@ Este projeto utiliza:
 - **Loops**: Para o menu interativo
 - **Condicionais**: Para validação de dados
 
-## 📝 Licença
-
-Este projeto foi desenvolvido para a UNIFECAF.
 
 ---
 
